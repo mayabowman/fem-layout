@@ -1,8 +1,8 @@
 html {
   box-sizing: border-box;
 }
-*, 
-*:before, 
+*,
+*:before,
 *:after {
   box-sizing: inherit;
 }
@@ -10,11 +10,32 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 ul {
+  display: flex;
+  flex-flow: row wrap;
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
-@media (min-width: 550px) {
+
+li {
+  flex: 0 0 100%;
 }
-@media (min-width: 850px) { 
+
+img {
+  width: 100%;
+}
+
+@media (min-width: 550px) {
+  li {
+    flex: 0 0 50%;
+  }
+}
+@media (min-width: 850px) {
+  li {
+    flex: 0 0 25%;
+  }
+
+  img {
+    width: 100%;
+  }
 }
